@@ -1,0 +1,29 @@
+<a href="/postagem">
+  <button style="background-color:#540413; border-color:#920D27;">
+    <font color="#eee" face="Century Gothic">Cadastrar</font>
+  </button>
+</a>
+<body bgcolor="#333"></body>
+<font color="#eee" face="Century Gothic">
+    <h1>Lista de Cadatro</h1>
+    <hr color="#eee">
+    {{#each posts}}
+    <small>{{dataValues.createdAt}}</small>
+    <h2>Nome: {{dataValues.nome}}</h2>
+    <p>Data de Nascimento: {{dataValues.data_nascimento}}</p>
+    <p>Email: {{dataValues.email}}</p>
+    <p>Telefone: {{dataValues.telefone}}</p>
+    <p>CEP: {{dataValues.cep}}</p>
+    <a href="/editar/{{dataValues.id}}">
+        <button style="background-color:#540413; border-color:#920D27;">
+            <font color="#eee" face="Century Gothic">Editar</font>
+        </button>
+    </a>
+    <a href="/deletar/{{dataValues.id}}">
+        <button style="background-color:#540413; border-color:#920D27;">
+            <font color="#eee" face="Century Gothic">Deletar</font>
+        </button>
+    </a>
+    <hr color="#eee">
+    {{/each}}
+</font>

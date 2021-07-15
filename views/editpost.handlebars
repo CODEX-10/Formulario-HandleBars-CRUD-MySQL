@@ -1,0 +1,32 @@
+<a href="/">
+    <button style="background-color:#540413; border-color:#920D27;">
+        <font color="#eee" face="Century Gothic">Lista Cadastro</font>
+    </button>
+</a>
+<body bgcolor="#333"></body>
+<form action="/atualizar" method="POST">
+    {{#each postagem}}
+    <center>
+      <font color="#eee" face="Century Gothic" size="6">
+        <h2 style="margin-top: 0%;"> EDITAR CADASTRO</h2>
+      </font> 
+      <font color="#eee" face="Century Gothic" size="5">
+        <p>Nome</p>
+        <input type="text" name="nome" style="width:6cm" value="{{dataValues.nome}}">
+        <input type="hidden" name="id" value="{{dataValues.id}}">
+        <p>Data de Nascimento</p>
+        <input type="text" name="data_nascimento" style="width:6cm" value="{{dataValues.data_nascimento}}">
+        <p>Email</p>
+        <input type="email" name="email" style="width:6cm" value="{{dataValues.email}}">
+        <p>Telefone</p>
+        <input type="number" name="telefone" style="width:6cm" value="{{dataValues.telefone}}">
+        <p>CEP</p>
+        <input type="number" name="cep" style="width:6cm" value="{{dataValues.cep}}">
+        <br><br>
+        <button type="submit" style="background-color:#540413; border-color:#920D27; width:6.2cm; height:1cm">
+            <font color="#eee" face="Century Gothic">Editar</font>
+        </button>
+      </font>  
+    </center>
+    {{/each}}
+</form>
